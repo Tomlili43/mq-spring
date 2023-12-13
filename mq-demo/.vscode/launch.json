@@ -1,0 +1,32 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "ConsumerTest",
+      "request": "launch",
+      "mainClass": "cn.itcast.mq.helloworld.ConsumerTest",
+      "projectName": "consumer"
+    },
+    {
+      "type": "java",
+      "name": "Spring Boot-PublisherApplication<publisher>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "cn.itcast.mq.PublisherApplication",
+      "projectName": "publisher",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env",
+      "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=57933 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=publisher"
+    },
+    {
+      "type": "java",
+      "name": "Spring Boot-ConsumerApplication<consumer>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "cn.itcast.mq.ConsumerApplication",
+      "projectName": "consumer",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
+    }
+  ]
+}
